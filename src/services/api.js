@@ -12,9 +12,16 @@ export const fetchMovies = async () => {
         page: 1,
       },
     });
-    return response.data.results;
+
+    // Transform data to match component requirements
+    return response.data.results.map(movie => ({
+      id: movie.id,
+      title: movie.title,
+      genre: movie.genre_ids[0] || 'Unknown', // Replace with actual genre mapping if needed
+      posterUrl: `https://image.tmdb.org/t/p/w500${movie.poster_path}`, // Full URL for poster
+    }));
   } catch (error) {
-    console.error('Error fetching movies:', error);
+    console.error('Error fetching movies:', error.message);
     return [];
   }
 };

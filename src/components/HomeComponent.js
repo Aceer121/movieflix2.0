@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import MovieList from '../components/MovieList';
-import SearchBar from '../components/SearchBar';
-import Filter from '../components/Filter';
+import MovieList from './MovieList';
+import SearchBar from './SearchBar';
+import Filter from './Filter';
 import { fetchMovies } from '../services/api';
 
 const Home = () => {

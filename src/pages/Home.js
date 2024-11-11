@@ -3,6 +3,7 @@ import { fetchMovies } from '../services/api'; // Import your API fetching funct
 import MovieList from '../components/MovieList';
 import SearchBar from '../components/SearchBar';
 import Filter from '../components/Filter';
+import HomeComponent from '../components/HomeComponent';
 
 const Home = () => {
   const [movies, setMovies] = useState([]); // State to hold the fetched movies

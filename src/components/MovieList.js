@@ -1,8 +1,7 @@
-import MovieCard from './MovieCard';
-
+import MovieCard from "./MovieCard";
 
 const MovieList = ({ movies = [] }) => {
-  console.log('Rendering MovieList with movies:', movies); // Debug log
+  // console.log('Rendering MovieList with movies:', movies); // Debug log
 
   if (movies.length === 0) {
     return <div>No movies available</div>; // Temporary message for debugging
@@ -10,7 +9,7 @@ const MovieList = ({ movies = [] }) => {
 
   return (
     <div className="movie-list">
-      {movies.map(movie => (
+      {movies.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
     </div>

@@ -3,11 +3,12 @@ import Home from '../pages/Home';
 
 function App() {
     return (
-        <div>
-            <h1>Welcome to MovieFlix!</h1>
-            < Home />
+        <div className="min-h-screen bg-gray-100">
+        <h1 className="text-4xl font-bold text-center my-6 text-blue-600">
+        Welcome to MovieFlix!
+        </h1>
+        <Home />
         </div>
-    );
+  );
 }
-
-export default Home;
+export default App;

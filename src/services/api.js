@@ -1,13 +1,20 @@
 import axios from 'axios';
 
+
 const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
+
+console.log('API Key:', API_KEY); // Add this to verify
+
+if (!API_KEY) {
+  console.error('API Key is undefined. Please check your .env file.');
+}
 
 export const fetchMovies = async () => {
   try {
     const response = await axios.get(`${BASE_URL}/movie/popular`, {
       params: {
-        api_key: API_KEY,
+        api_key:  API_KEY,
         language: 'en-US',
         page: 1,
       },
